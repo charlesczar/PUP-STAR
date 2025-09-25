@@ -1,0 +1,161 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body style */
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: linear-gradient(135deg, #e7d9c5 0%, #d4c4a8 100%);
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    animation: subtle-move 3s infinite alternate ease-in-out; /* subtle movement */
+    overflow-x: hidden; /* Disable horizontal scrolling */
+}
+
+@keyframes subtle-move {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #5e1b1b;
+}
+
+/* Header area */
+header {
+    position: relative;
+    height: 200px; /* reserve space for logo + text */
+    background-color: #f9f4ef;
+    margin-top: 0;
+    border-bottom: 2px solid #5e1b1b;
+}
+
+/* Logo on the left */
+#logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 150px;
+    height: 150px;
+}
+
+/* Text on the right */
+#header {
+    position: relative;
+    top: 30px;
+    left: 180px;  
+    padding: 20px; 
+    width: 100%; 
+}
+
+
+/* Info Section */
+#info-section {
+    background-color: #f9f4ef;
+    border: 2px solid #5e1b1b;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    text-align: center;
+    box-shadow: 10px 5px 8px rgba(0,0,0,0.1);
+}
+
+#info-section h3 {
+    margin-bottom: 10px;
+}
+
+#desc {
+    font-size: 1rem;
+    color: #303030;
+}
+
+/* Chat Section */
+#chat-container {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #f9f4ef;
+    border: 2px solid #5e1b1b;
+    border-radius: 10px;
+    padding: 0; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+#chat-header {
+    background: #5e1b1b;
+    color: #fff;
+    font-weight: bold;
+    padding: 12px;
+    text-align: center;
+}
+
+iframe {
+    width: 100%;
+    border: none;
+    min-height: 600px;
+}
+
+#chat-link {
+    display: inline-block; 
+    text-decoration: none; 
+    color: inherit; 
+    cursor: pointer; 
+}
+
+#chat-link:hover {
+    transform: scale(1.2) rotate(2deg); 
+    transition: transform 0.3s ease, color 0.3s ease; 
+    color: #ffdb58 ; /* Change color to make it stand out */
+    text-shadow: 0 0 10px rgba(238, 251, 1, 0.8); /* Add glowing effect */
+} 
+
+#header:hover, #logo:hover, #info-section:hover, #chat-container:hover {
+    transform: scale(1.05); 
+    transition: transform 0.3s ease; 
+}
+
+/*For phones, in theory HAHAHA */
+@media (max-width: 768px) {
+    header {
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        padding: 10px; 
+    }
+
+    #logo {
+        margin-bottom: 20px; 
+        width: 150px; 
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    #info-section {
+        margin: 10px; 
+        padding: 15px; 
+        max-width: 100%; 
+        box-shadow: none; 
+    }
+
+    #chat-container {
+        margin: 10px; 
+        padding: 10px; 
+        max-width: 100%; 
+        box-shadow: none; 
+
+    iframe {
+        min-height: 400px; 
+    }
+}
+
+}
