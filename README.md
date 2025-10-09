@@ -1,5 +1,6 @@
 # PUP STAR 🌟
 STAR: Student Handbook Assistant & Resource
+
 PUP STAR is a web-based chatbot designed to help Polytechnic University of the Philippines (PUP) students quickly access important information from the official Student Handbook (2019 Revised Edition).
 
 Instead of browsing through dozens of pages, students can simply ask questions and receive instant, accurate answers about:
